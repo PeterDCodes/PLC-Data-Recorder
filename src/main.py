@@ -18,6 +18,7 @@ style = ttk.Style()
 style.theme_use("default")
 #TODO
 title_font = tkfont.Font(family="Helvetica", size=32, weight="bold")
+font1 = tkfont.Font(family="Helvetica", size=20, weight="bold")
 style.configure("Exit.TButton", foreground = "white", background="red", borderwidth=2, font=("Helvetica", 16, "bold"), relief="raised") 
 style.configure("Info.TButton", foreground = "black", background="gray", borderwidth=2, font=("Helvetica", 16, "bold"), relief="raised") 
 
@@ -35,7 +36,6 @@ root.grid_rowconfigure(0, weight=2)
 root.grid_rowconfigure(1, weight=20)
 root.grid_rowconfigure(2, weight=1)
 root.grid_columnconfigure(0, weight=1)
-
 
 #Level 2 subframes
 #A
@@ -99,11 +99,11 @@ subB2a1.grid_columnconfigure(1, weight=1)
 subB2a1.grid_columnconfigure(2, weight=1)
 #sub rows for 
 #labels in sub B2 for PLC data entry and naming
-device_name_label = ttk.Label(subB2a1a, text="Device Name")
+device_name_label = ttk.Label(subB2a1a, text="Device Name", font=font1)
 device_name_label.grid(column=0, row=0)
-device_name_entry = ttk.Entry(subB2a1a)
+device_name_entry = ttk.Entry(subB2a1a, justify="center")
 device_name_entry.grid(column=1, row=0)
-ip_address_label = ttk.Label(subB2a1a, text="Device IP")
+ip_address_label = ttk.Label(subB2a1a, text="Device IP", font=font1)
 ip_address_label.grid(column=0, row=1)
 ip_address_entry = ttk.Entry(subB2a1a)
 ip_address_entry.grid(column=1, row=1)
